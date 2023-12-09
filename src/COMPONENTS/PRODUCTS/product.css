@@ -1,0 +1,238 @@
+.productnavspace{
+  margin-top: 50px;
+}
+
+.products-category-right{
+  padding-bottom: 20px;
+}
+
+.menbgimg {
+  width: 100%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./img/men2.jpg');
+  background-attachment: fixed !important;
+}
+
+.womenbgimg {
+  width: 100%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./img/women.jpg');
+  background-attachment: fixed !important;
+}
+
+.Accessoriesbgimg {
+  width: 100%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./img/accessories.jpg');
+  background-attachment: fixed !important;
+}
+.kidsbgimg{
+  width: 100%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./img/k1.jpg');
+  background-attachment: fixed !important;
+}
+
+@media only screen and (max-width: 1160px) {
+  .menbgimg {
+    height: 500px;
+  }
+
+  .womenbgimg {
+    height: 500px;
+  }
+
+  .Accessoriesbgimg {
+    height: 500px;
+  }
+  .kidsbgimg {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .menbgimg {
+    height: 400px;
+  }
+
+  .womenbgimg {
+    height: 400px;
+  }
+
+  .Accessoriesbgimg {
+    height: 400px;
+  }
+  .kidsbgimg {
+    height: 400px;
+  }
+}
+
+.heddinggg {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-top: 20%;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+@media only screen and (max-width: 560px) {
+  .heddinggg {
+    padding-top: 40%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .heddinggg {
+    font-size: 60px;
+  }
+}
+
+
+
+
+/* card */
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+/* card */
+
+
+.product-card {
+  margin-top: 100px;
+}
+
+.dress-card-img-top {
+  width: 100%;
+  border-radius: 7px 7px 0 0;
+}
+
+.dress-card-body {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0 0 7px 7px;
+}
+
+.dress-card-title {
+  line-height: 0.5rem;
+}
+
+.dress-card-crossed {
+  text-decoration: line-through;
+}
+
+.dress-card-price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dress-card-off {
+  color: #cc2828;
+}
+
+.dress-card-para {
+  margin-bottom: 0.2rem;
+  font-size: 1.0rem;
+  margin-bottom: 0rem;
+}
+
+.dress-card {
+  border-radius: 14px;
+}
+
+
+
+.card-button {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 9px;
+}
+
+.card-button a {
+  text-decoration: none;
+}
+
+.card-button-inner {
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.bag-button {
+  background: #000000;
+  color: white;
+}
+
+.bag-button :hover {
+  background: #e299b9;
+}
+
+.wish-button {
+  border: 1px solid rgb(0, 0, 0);
+  color: #000000;
+}
+.remove-button {
+  border: 1px solid rgb(255, 0, 0);
+  color: #ff0000;
+}
+
+
+
+
+
+/* view Product */
+
+.contview {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contview>div {
+  flex: 1 1 calc(992px/ 2);
+}
+
+.imgview {
+  border: 1px solid #ffffff;
+  height: 100vh;
+  padding: 2rem;
+  
+}
+
+.imgview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textcontentttt {
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+}
+
+.heddingggg123 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #414141;
+  font-size: 3rem;
+  font-weight: 10px !important;
+  font-size: 90px;
+  margin-bottom: 3rem;
+}
+
+.peradesignnnnnn {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #606060;
+  font-weight: 100;
+  font-size: 20px;
+}
