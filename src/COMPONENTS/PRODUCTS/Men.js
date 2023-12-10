@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './product.css'
 import cardimg from './img/p2.jpg'
 import Navbar from '../NAVEBAR/Navbar'
-import Colordnav from '../NAVEBAR/Colordnav'
+// import Nav from '../NAVEBAR/Nav'
 import Footer from '../FOOTER/Footer'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { filterrr } from '../REDUX/SLICE/eventslice'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { filterrr } from '../REDUX/SLICE/eventslice'
 import axios from 'axios'
-import { event } from 'jquery'
+// import { event } from 'jquery'
+import Colordnav from '../NAVEBAR/Colordnav'
 export default function Men() {
 
 
@@ -54,12 +55,15 @@ export default function Men() {
 
   console.log(state, 'sdklfj');
 
-  const viewproduct = () => {
-    Navigate('/viewproduct')
+  const viewproduct = (productId) => {
+
+    Navigate(`/viewproduct/${productId}`);
   }
+
+
   return (
     <>
-      <Colordnav />
+      <Colordnav/>
       <div className={`container ${filter == "men" ? 'menbgimg' : filter == "women" ? 'womenbgimg' : filter == "kids" ? "kidsbgimg" : filter == "home" ? "Accessoriesbgimg" : null}`}>
         <h1 className='heddinggg'>{filter} Collections</h1>
       </div>
@@ -71,7 +75,7 @@ export default function Men() {
         <div className='products-category-right' style={{ textAlign: 'right' }}>
           <label class="name" style={{ display: 'inline-block', marginRight: '10px' }}>Category</label>
           <select class="form-select" aria-label="Default select example" onChange={Catogoryyy} name='category' style={{ width: '250px', display: 'inline-block' }}>
-            <option name="category" value="" selected>Open this select menu</option>
+            <option name="category" value="" selected>All</option>
             <option name="category" value="Trousers">Trousers</option>
             <option name="category" value="jeans">jeans</option>
             <option name="category" value="shirt">shirt</option>

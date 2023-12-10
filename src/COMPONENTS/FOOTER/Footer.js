@@ -1,6 +1,16 @@
 import React from 'react'
 import './footer.css'
+import { useNavigate } from 'react-router-dom';
 export default function Footer() {
+
+  const navigate = useNavigate()
+    const passvalue = (name) => {
+        console.log(name);
+        navigate(`/men/${name}`)
+    }
+
+
+
   return (
 
     <footer class="bg-light footer-bgg">
@@ -19,19 +29,19 @@ export default function Footer() {
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">For Women</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">For Men</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">For Kids</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Accessories</a></li>
+            <li class="mb-2"><a onClick={() => passvalue('men')} class="text-muted">For Men</a></li>
+            <li class="mb-2"><a onClick={() => passvalue('women')} class="text-muted">For women</a></li>
+            <li class="mb-2"><a onClick={() => passvalue('kids')} class="text-muted">For Kids</a></li>
+            <li class="mb-2"><a onClick={() => passvalue('home')} class="text-muted">home</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Favourites</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Shopping bag</a></li>
+            <li class="mb-2"><a href="/login" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="/register" class="text-muted">Register</a></li>
+            <li class="mb-2"><a href="/Fav" class="text-muted">Favourites</a></li>
+            <li class="mb-2"><a href="/Cart" class="text-muted">Shopping bag</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-6 mb-lg-0">

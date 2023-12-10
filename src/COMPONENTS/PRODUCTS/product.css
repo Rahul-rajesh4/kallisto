@@ -8,7 +8,7 @@
 
 .menbgimg {
   width: 100%;
-  height: 650px;
+  height: 550px;
   background-position: center;
   background-size: cover;
   background-image: url('./img/men2.jpg');
@@ -17,7 +17,7 @@
 
 .womenbgimg {
   width: 100%;
-  height: 650px;
+  height: 550px;
   background-position: center;
   background-size: cover;
   background-image: url('./img/women.jpg');
@@ -26,7 +26,7 @@
 
 .Accessoriesbgimg {
   width: 100%;
-  height: 650px;
+  height: 550px;
   background-position: center;
   background-size: cover;
   background-image: url('./img/accessories.jpg');
@@ -34,7 +34,7 @@
 }
 .kidsbgimg{
   width: 100%;
-  height: 650px;
+  height: 550px;
   background-position: center;
   background-size: cover;
   background-image: url('./img/k1.jpg');
@@ -92,7 +92,7 @@
 
 @media only screen and (max-width: 560px) {
   .heddinggg {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
@@ -191,6 +191,9 @@
 
 
 /* view Product */
+.productspaceeee{
+  margin-top: 10px;
+}
 
 .contview {
   display: flex;
@@ -198,20 +201,19 @@
   flex-wrap: wrap;
 }
 
-.contview>div {
-  flex: 1 1 calc(992px/ 2);
+.contview > div {
+  flex: 1 1 calc(992px / 2);
 }
 
 .imgview {
   border: 1px solid #ffffff;
   height: 100vh;
-  padding: 2rem;
-  
+  overflow-y: auto; /* Enable vertical scrolling for the .imgview div */
 }
 
 .imgview img {
   width: 100%;
-  height: 100%;
+  height: auto; /* Adjust height property to maintain image aspect ratio */
   object-fit: cover;
 }
 
@@ -219,20 +221,59 @@
   padding: 2rem;
   position: sticky;
   top: 0;
+  z-index: 1; /* Ensure the text content appears above the .imgview */
+  background-color: #ffffff; /* Optional: Add a background color to distinguish it */
 }
 
 .heddingggg123 {
   font-family: "Roboto Condensed", sans-serif;
   color: #414141;
   font-size: 3rem;
-  font-weight: 10px !important;
-  font-size: 90px;
+  font-weight: 10; /* Note: Adjusted font-weight property */
   margin-bottom: 3rem;
 }
 
-.peradesignnnnnn {
-  font-family: "Roboto Condensed", sans-serif;
-  color: #606060;
-  font-weight: 100;
-  font-size: 20px;
+/* button */
+
+.sizehedding{
+  margin-top: 20px;
 }
+
+.size-button {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 9px;
+}
+
+.size-button-inner {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectt-button {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  width: 80px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s; /* Added transition for smooth color change */
+}
+
+.selectt-button:hover,
+.selectt-button.hovered {
+  background: #303030;
+  color: #ffffff;
+}
+
+.size-button .selectt-button {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+

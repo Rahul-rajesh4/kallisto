@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Nav.css'
+import { useNavigate } from 'react-router-dom';
 export default function Nav() {
+
+
+  const Navigate = useNavigate()
 
 
 
@@ -29,11 +33,18 @@ export default function Nav() {
   const role = localStorage.getItem('role')
   console.log(role);
 
+
+  const gohome = ()=>{
+    Navigate('/')
+  }
+
   return (
     <>
       <nav className={`navbar navbar-expand-lg fixed-top ${color ? 'navbar-bg' : 'nav-transparent'}`}>
         <div className="container-fluid">
-          <label className="navbar-brand logo">K</label>
+          <div onClick={gohome}>
+          <label className="navbar-brand logo" >K</label>
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

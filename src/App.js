@@ -41,7 +41,7 @@ function App() {
         <Route path='/Cart' element={<Booking />}/>
         <Route path='/admin' element={<Admin />}/>
         <Route path='/view' element={<View />}/>
-        <Route path='/viewproduct' element={<Viewproduct />}/>
+        <Route path='/viewproduct/:productId' element={<Viewproduct />}/>
         </Routes>
       </BrowserRouter>
 
