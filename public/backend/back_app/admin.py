@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import login,UserRegister,Products,productsize
+from .models import *
 # Register your models here.
 admin.site.register(login)
 admin.site.register(UserRegister)
@@ -11,7 +11,10 @@ class sizetabview(admin.TabularInline):
     model=productsize
 
 class productlistview(admin.ModelAdmin):
-    list_display=('name','actualprice','discountprice')
+    list_display=('id','name','actualprice','discountprice')
     inlines=[sizetabview,]
 admin.site.register(Products,productlistview)
+
+
+admin.site.register(cart)
 

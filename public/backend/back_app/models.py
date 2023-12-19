@@ -96,3 +96,9 @@ class productsize(models.Model):
 #     product = models.ForeignKey(Products, on_delete=models.CASCADE)
 #     size = models.ForeignKey(productsize, on_delete=models.CASCADE)
 #     count = models.PositiveIntegerField(default=0)
+
+class cart(models.Model):
+    product_name=models.CharField(max_length=250)
+    size=models.CharField(max_length=50,null=True,blank=True)
+    log_id=models.CharField(max_length=50)
+

@@ -25,11 +25,11 @@ export default function Home() {
                 <div className='content'>
                     <label>Kallisto</label>
                 </div>
-            </div>
+            </div >
             <div className='navspace'>
                 <Navbar />
             </div>
-            <div>
+            <div className=''>
                 <Imgdiv />
             </div>
             <div className='container men'>

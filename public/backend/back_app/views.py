@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import login,UserRegister,productsize,Products
-from .serializers import loginSerializer,registerSerializer,productSerializer
+from .models import *
+from .serializers import *
 
 
 class Registerapi(GenericAPIView):
@@ -100,3 +100,38 @@ class filtermethod(GenericAPIView):
         return Response({'data':datas.data,'message':'success'})
      
 
+class getSingleproduct(GenericAPIView):
+    serializer_class=productSerializer
+    serializer_class_size=SizeSerializer
+    def get(self,request,id):
+        prodata=Products.objects.get(id=id)
+        print(prodata,'------e5')
+        newdata=self.serializer_class(prodata)
+        print(newdata,'========new')
+        size=productsize.objects.filter(pro_name=prodata)
+        sizedata=self.serializer_class_size(size,many=True)
+        print(size,'///////////////////')
+        return Response({'data':newdata.data,'data2':sizedata.data})
+
+
+class getcartdetails(GenericAPIView):
+    serializer_class=cartSerializer
+    def post(self,request):
+        size=request.data.get('selectedSize')
+        log_id=request.data.get('log_id')
+        product_name=request.data.get('product_name')
+        serializer=self.serializer_class(data={'product_name':product_name,'size':size,'log_id':log_id})
+        if serializer.is_valid():
+            serializer.save()
+        # print(size)
+        # print(log_id)
+        # print(product_name)
+        return Response({'data':serializer.data,'suceess':'success'})
+
+class carditailsshow(GenericAPIView):
+    serializer_class=cartSerializer
+    def get(self,request,id):
+        cartData=cart.objects.filter(log_id=id)
+        serializer=self.serializer_class(cartData,many=True)
+        print(cartData,'cartData')
+        return Response({'data':serializer.data,'suceess':'success'})
